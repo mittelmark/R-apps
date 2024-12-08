@@ -10,6 +10,8 @@ The following applications are provided:
 
 ## Examples
 
+### Rcheck
+
 ```bash
 user@micky R-apps]$ cat -n tests/Rcheck-test.R 
      1	#!/usr/bin/env Rscript
