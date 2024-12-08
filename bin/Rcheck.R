@@ -45,11 +45,6 @@
 #'       Error bin/Rcheck-test.R:7:
 #'       Objekt 'a' nicht gefunden 
 #' 
-#' TODO
-#'
-#'       - suppress print and cat terminal output
-#'       - more tests
-#'
 #' AUTHOR
 #'
 #'      Detlef Groth, University of Potsdam, Germany
@@ -61,6 +56,14 @@
 #' HOMEPAGE
 #'
 #'      https://github.com/mittelmark/R-apps
+#'
+# End of Help
+
+#  TODO
+#
+#   - suppress print and cat terminal output
+#   - more tests
+
 
 evaluate_rscript <- function(file_path) {
     # Read the lines from the specified R script file
@@ -118,7 +121,7 @@ help <- function (argv) {
     fin  = file(argv[1], "r")
     while(length((line = readLines(fin,n=1)))>0) {
         if (grepl("^#'",line)) {
-           cat(gsub("__APP__",substr(line,3,nchar(line)),argv[1]),"\n")
+           cat(gsub("__APP__",argv[1],substr(line,3,nchar(line))),"\n")
         }
     }
     close(fin)
