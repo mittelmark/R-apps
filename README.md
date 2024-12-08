@@ -43,7 +43,7 @@ chmod 755 ~/.local/bin/Rcheck
 Rcheck 
 # ...
 # Usage: /home/user/.local/bin/Rcheck [--help,-h] FILENAME
-'''
+```
 
 ## License
 
