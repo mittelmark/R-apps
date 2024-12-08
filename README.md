@@ -11,6 +11,15 @@ The following applications are provided:
 ## Examples
 
 ```bash
+user@micky R-apps]$ cat -n tests/Rcheck-test.R 
+     1	#!/usr/bin/env Rscript
+     2	## Test for bin/Rcheck.R
+     3	x=3
+     4	print(z)
+     5	z=3
+     6	print(z)
+     7	print(a)
+
 [user@micky R-apps]$ Rscript bin/Rcheck.R tests/Rcheck-test.R 
 Error tests/Rcheck-test.R:4:
  Objekt 'z' nicht gefunden 
